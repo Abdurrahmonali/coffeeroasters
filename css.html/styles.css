@@ -69,7 +69,8 @@ only screen and (                min-resolution: 2dppx) {
 }
 .header-wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   width: 1340px;
   height: 24px;
   margin: 0%;
@@ -87,7 +88,10 @@ margin: 0%;
 .site-nav {
   width: 400px;
   margin: 0%;
-
+}
+.footer-site-nav {
+  width: 300px;
+  margin: 0%;
 }
 .ul-site-nav-item {
   padding: 0%;
@@ -139,7 +143,6 @@ padding-left: 660px;
   padding: 20px;
   background-color: #fff;
   width: 1400px;
-  height: 1740px;
   flex-grow: 1;
 }
 /* HERO */
@@ -149,6 +152,9 @@ height: 1740px;
 margin: 0%;
 margin-bottom: 20px;
 background-color: #efefda;
+background-image: url("../img/leaves-left.svg");
+background-repeat: no-repeat;
+background-position: left top;
 }
 .hero-contain h1 {
   margin: 0%;
@@ -291,4 +297,26 @@ line-height: 28px;
   height: 135px;
 margin: 0%;
 margin-bottom: -70px;
+}
+
+/* FOOTER */
+.footer-wrap {
+  margin: 0%;
+  padding: 0%;
+  width: 1440px;
+  height: 160px;
+background-color: var(--header-color-background);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.footer-img-social {
+  width: 150px;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.footer-img-social img:not(last-child) {
+  margin-right: 30px;
 }
