@@ -176,9 +176,12 @@ height: 1740px;
 margin: 0%;
 margin-bottom: 20px;
 background-color: #efefda;
-background-image: url("../img/leaves-left.svg");
-background-repeat: no-repeat;
-background-position: left top;
+background-image:
+url("../img/leaves-left.svg"),
+url("../img/leaves-left-light.svg"),
+url("../img/leaves-right-mix.svg");
+background-repeat: no-repeat, no-repeat, no-repeat;
+background-position: left top, left bottom, right center;
 }
 .hero-contain h1 {
   margin: 0%;
