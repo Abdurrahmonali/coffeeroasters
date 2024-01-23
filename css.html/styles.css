@@ -79,11 +79,15 @@ padding-right: 50px;
 padding-bottom: 0px;
 padding-left: 50px;
 }
+.header-logo-link {
+flex-shrink: 0;
+}
 .site-icon {
   display: block;
 width: 235px;
 height: 24px;
 margin: 0%;
+object-fit: cover;
 }
 .site-nav {
   width: 400px;
@@ -111,6 +115,7 @@ font-size: 12px;
 line-height: 14px;
 letter-spacing: 1px;
 color: var(--text-color);
+white-space: nowrap;
 }
 .uppercase {
   text-transform: uppercase;;
@@ -128,6 +133,25 @@ color: var(--text-color);
 }
 .header-texts p {
   margin: 0%;
+  margin-bottom: 30px;
+}
+.button {
+  text-transform: uppercase;
+  width: 193px;
+  height: 51px;
+  margin: 0%;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: 1px;
+text-align: center;
+color: #fff;
+border: none;
+border-radius: 100px;
+cursor: pointer;
+}
+.header-button {
+background-color: var(--color-background);
 }
 .stamp {
 width: 160px;
@@ -304,19 +328,21 @@ line-height: 28px;
   height: 135px;
 margin: 0%;
 margin-bottom: -70px;
+position: absolute;
 }
 
 /* CTA */
+.div-cta-content {
+  margin: 0%;
+}
 .cta-wrap {
   margin: 0%;
-width: 1360px;
-height: 776px;
+width: 1400px;
+height: 826px;
 background-color: var(--color-background);
-padding-left: 20PX;
-padding-right: 20PX;
-padding-bottom: 50PX;
 }
 .cta-wrap h1 {
+  text-transform: uppercase;
   font-weight: 700;
 height: 59px;
   font-size: 50px;
@@ -328,57 +354,56 @@ text-align: center;
 }
 .cta-div-logo {
   margin: 0%;
-margin-top: -70px;
+margin-top: -60px;
+margin-bottom: 35px;
   display: flex;
   justify-content: end;
-  padding-right: 70px;
+  padding-right: 90px;
 }
 .cta-logo {
 width: 190px;
 height: 130px;
 margin: 0%;
 }
-.div-for-hr {
-  width: 60px;
-height: 60px;
-  margin: 0%;
-  margin-bottom: 20px;
-}
-.div-for-hr {
-  box-shadow: 455px 0 0 #fff, 910px 0 0 #fff;
-}
-.cta-hr {
-  display: flex;
-  margin: 0%;
-  margin-top: -16px;
-  width: 50px;
-  height: 50px;
-background-color: #fff;
-border: 4px solid #C99B67;
-}
-
 .div-cta-boxs {
   display: flex;
 margin: 0%;
-margin-bottom: 60px;
+margin-bottom: 50px;
+padding: 0%;
+padding-right: 30px;
+padding-left: 30px;
+list-style: none;
+counter-reset: ol-item;
 }
-.div-cta-boxs section {
-width: 420px;
-height: 336px;
-background-color: #fff;
+.cta-item {
 margin: 0%;
-padding: 20px;
-padding-bottom: 40px;
-}
-.div-cta-boxs section:not(last-child) {
 margin-right: 20px;
+counter-increment: ol-item;
 }
-.div-cta-boxs h2 {
+.cta-item::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border: 4px solid var(--header-color-background);
+}
+.cta-item section {
+display: flex;
+flex-direction: column;
+  flex-grow: 1;
+  margin: 0%;
+  padding: 0%;
+  padding: 20px;
+padding-bottom: 40px;
+background-color: #fff;
+}
+.cta-item section::before {
+  content: "0"counter(ol-item);
   font-size: 64px;
   line-height: 75px;
   margin: 0%;
   margin-bottom: 45px;
-  text-align: right;
+align-self: flex-end;
 }
 .div-cta-boxs h3 {
   font-weight: 500;
@@ -401,11 +426,8 @@ margin-right: 20px;
   justify-content: center;
 margin: 0%;
 }
-.div-button-cta button {
-  padding: 16px 24px;
+.cta-button {
   background-color: #C99B67;
-  border: none;
-  border-radius: 100px;
 }
 /* FOOTER */
 .footer-wrap {
